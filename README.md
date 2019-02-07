@@ -1,3 +1,23 @@
+# Выполнено ДЗ №13
+
+ - [ ] Основное ДЗ
+ - [ ] Задание со звездочкой
+ 
+## В процессе сделано:
+
+ - ;
+ - ;
+ - ;
+ 
+## Build status:
+
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/dmitry-lyutenko_microservices.svg?branch=docker-1)](https://travis-ci.com/Otus-DevOps-2018-09/dmitry-lyutenko_microservices)
+
+## PR checklist
+ - [ ] Выставил label с номером домашнего задания
+ - [ ] Выставил label с темой домашнего задания
+
+
 # Выполнено ДЗ №12
 
  - [X] Основное ДЗ
