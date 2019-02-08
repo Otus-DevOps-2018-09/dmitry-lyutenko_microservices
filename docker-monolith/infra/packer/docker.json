@@ -9,8 +9,8 @@
         {
             "type": "googlecompute",
             "project_id": "{{user `project_id`}}",
-            "image_name": "reddit-docker-{{timestamp}}",
-            "image_family": "reddit-docker",
+            "image_name": "docker-monolith-{{timestamp}}",
+            "image_family": "docker-monolith-base",
             "source_image_family": "{{user `source_image_family`}}",
             "zone": "europe-west1-d",
             "ssh_username": "appuser",
@@ -25,8 +25,10 @@
     "provisioners": [
         {
             "type" : "ansible",
-            "ansible_env_vars": ["ANSIBLE_ROLES_PATH={{ pwd }}/ansible/roles"],
-            "playbook_file" : "../ansible/docker.yml"
+            "user" : "appuser",
+            "extra_arguments": ["--tags","docker-monolith"],
+            "ansible_env_vars": ["ANSIBLE_ROLES_PATH={{ pwd }}/ansible/roles","ansible_user="],
+            "playbook_file" : "ansible/playbooks/packer_docker.yml"
         }
     ]
 }
