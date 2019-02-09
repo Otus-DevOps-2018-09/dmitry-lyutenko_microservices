@@ -11,6 +11,7 @@ jdauphant.nginx
 vault.key
 *lint*
 .vagrant/
+Vagrant*
 *.pyc
 .molecule
 .cache
