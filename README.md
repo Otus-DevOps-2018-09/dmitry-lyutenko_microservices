@@ -10,7 +10,7 @@
  - оптимизировали предложенные в ДЗ образы, путем перехода на использование alpine-linux образов в качестве базы и уменьшения числа слоев;
  - запустили наше приложение в виде микросервисов;
  - создали и подключили ```volume```, чтобы не терять наши данные при перезапуске или пересоздании контейнера
- 
+
 
 
 ### Уменьшенные версии образов
@@ -27,11 +27,11 @@ egiptyanin/post        109MB
 
 ## Build status:
 
-[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/dmitry-lyutenko_microservices.svg?branch=docker-2)](https://travis-ci.com/Otus-DevOps-2018-09/dmitry-lyutenko_microservices)
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/dmitry-lyutenko_microservices.svg?branch=docker-3)](https://travis-ci.com/Otus-DevOps-2018-09/dmitry-lyutenko_microservices)
 
 ## PR checklist
- - [ ] Выставил label с номером домашнего задания
- - [ ] Выставил label с темой домашнего задания
+ - [X] Выставил label с номером домашнего задания
+ - [X] Выставил label с темой домашнего задания
 
 
 # Выполнено ДЗ №13
