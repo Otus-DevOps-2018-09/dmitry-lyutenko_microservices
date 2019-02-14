@@ -1,0 +1,40 @@
+version: '3.3'
+services:
+  post_db:
+    image: mongo:latest
+    container_name: ${post_db_name}
+    volumes:
+      - ${db_volume}:/data/db
+    networks:
+      - ${back_net}
+  ui:
+    build: ./ui
+    image: ${USERNAME}/ui:${UI_VERSION}
+    container_name: ${ui_name}
+    ports:
+      - ${EXP_PORT}:9292/tcp
+    networks:
+      - ${front_net}
+  post:
+    build: ./post-py
+    image: ${USERNAME}/post:1.0
+    container_name: ${post_name}
+    networks:
+      - ${back_net}
+      - ${front_net}
+  comment:
+    build: ./comment
+    image: ${USERNAME}/comment:${COMMENT_VERSION}
+    container_name: ${comment_name}
+    networks:
+      - ${back_net}
+      - ${front_net}
+
+volumes:
+  post_db:
+
+
+
+networks:
+  front_net:
+  back_net:
