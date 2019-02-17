@@ -17,4 +17,6 @@ Vagrant*
 .cache
 .pytest_cache
 *python.apt*
+.env
+*_all.sh
 
