@@ -12,7 +12,7 @@ class MyAppTest < Test::Unit::TestCase
   end
 
   def test_get_request
-    get '/'
+    get '/:9292'
     assert last_response.ok?
   end
 end
