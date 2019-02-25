@@ -1,3 +1,0 @@
----
-- import_playbook: packer_docker.yml
-- import_playbook: deploy_container.yml
