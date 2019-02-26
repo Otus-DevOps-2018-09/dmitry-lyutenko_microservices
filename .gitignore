@@ -19,4 +19,4 @@ Vagrant*
 *python.apt*
 .env
 *_all.sh
-
+*.sh
