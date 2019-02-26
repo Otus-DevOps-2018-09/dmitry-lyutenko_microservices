@@ -17,9 +17,19 @@ services:
       - ${EXP_PORT}:9292/tcp
     networks:
       - ${front_net}
+    logging:
+      driver: "fluentd"
+      options: 
+        fluentd-address: localhost:24224
+        tag: service.ui
   post:
     image: ${USERNAME}/post:${POST_VERSION}
     container_name: ${post_name}
+    logging:
+      driver: "fluentd"
+      options: 
+        fluentd-address: localhost:24224
+        tag: service.post
     networks:
       - ${back_net}
       - ${front_net}
@@ -29,6 +39,11 @@ services:
     networks:
       - ${back_net}
       - ${front_net}
+    logging:
+      driver: "fluentd"
+      options: 
+        fluentd-address: localhost:24224
+        tag: service.comment
 
 volumes:
   post_db:
