@@ -1,3 +1,25 @@
+# Выполнено ДЗ №18
+
+ - [X] Основное ДЗ
+ 
+## В процессе сделано:
+
+ - установили prometheus и ознакомились с его базовыми возможностями;
+ - добавили helthcheck микросервисов к мониторингу при помощи yml-где, описаны необходимые задачи и точки подклюючения для сбора метрик;
+ - установили и ознакомились с node-exporter'ом, который позволяет собирать данные о хосте;
+ - созданные образы запушены в docker-hub https://hub.docker.com/r/egiptyanin
+
+## Build status:
+
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/dmitry-lyutenko_microservices.svg?branch=monitoring-1)](https://travis-ci.com/Otus-DevOps-2018-09/dmitry-lyutenko_microservices)
+
+## PR checklist
+ - [X] Выставил label с номером домашнего задания
+ - [X] Выставил label с темой домашнего задания
+
+---
+---
+
 # Выполнено ДЗ №17
 
  - [X] Основное ДЗ
