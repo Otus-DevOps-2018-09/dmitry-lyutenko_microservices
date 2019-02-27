@@ -13,6 +13,8 @@ services:
   ui:
     image: ${USERNAME}/ui:${UI_VERSION}
     container_name: ${ui_name}
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     ports:
       - ${EXP_PORT}:9292/tcp
     networks:
@@ -25,6 +27,8 @@ services:
   post:
     image: ${USERNAME}/post:${POST_VERSION}
     container_name: ${post_name}
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     logging:
       driver: "fluentd"
       options: 
@@ -36,6 +40,8 @@ services:
   comment:
     image: ${USERNAME}/comment:${COMMENT_VERSION}
     container_name: ${comment_name}
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     networks:
       - ${back_net}
       - ${front_net}
