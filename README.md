@@ -1,3 +1,25 @@
+# Выполнено ДЗ №21
+
+ - [X] Основное ДЗ
+ 
+## В процессе сделано:
+
+ - познакомились с сущностью Deployment. Это один из манифестов Kubernetes, который отвечает за процесс деплоя, количество реплик;
+ - написали деплойменты для наших микросервисов (comment, mongo, post, ui);
+ - воспользовавшись Kubernetes The Hard Way, подняли свой кластер из 3 контроллеров и 3 воркеров;
+ - протестировали создание подов по нашим деплойментам;
+ 
+## Build status:
+
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/dmitry-lyutenko_microservices.svg?branch=kubernetes-1)](https://travis-ci.com/Otus-DevOps-2018-09/dmitry-lyutenko_microservices)
+
+## PR checklist
+ - [X] Выставил label с номером домашнего задания
+ - [X] Выставил label с темой домашнего задания
+
+---
+---
+
 # Выполнено ДЗ №20
 
  - [X] Основное ДЗ
