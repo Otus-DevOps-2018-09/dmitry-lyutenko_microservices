@@ -1,3 +1,31 @@
+# Выполнено ДЗ №22
+
+ - [X] Основное ДЗ
+ 
+## В процессе сделано:
+
+ - развернули локальное окружение для работы с kubernetes (kubectl, minikube);
+ - посмотрели как хранится конфигурация (context) kubectl в ~/.kube/config;
+ - написали деплойменты для компонентов нашего приложения и развернули их в minikube;
+ - написали Service, это позволяет отдельным микросервисам общаться друг с другом (comment и post увидели mongodb), а так же через nodePort видеть сервис снаружи;
+ - научились применять Namespaces для нашего приложения;
+ - подлючились к GKE и развернули наше приложение там;
+ - ознакомились с dashboard (оказался по ссылке http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/)
+ 
+## Как проверить
+Приложение можно проверить по адресу http://35.188.31.165:32092/
+
+## Build status:
+
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/dmitry-lyutenko_microservices.svg?branch=kubernetes-2)](https://travis-ci.com/Otus-DevOps-2018-09/dmitry-lyutenko_microservices)
+
+## PR checklist
+ - [X] Выставил label с номером домашнего задания
+ - [X] Выставил label с темой домашнего задания
+
+---
+---
+
 # Выполнено ДЗ №21
 
  - [X] Основное ДЗ
