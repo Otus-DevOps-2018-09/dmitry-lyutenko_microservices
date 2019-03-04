@@ -1,0 +1,8 @@
+---
+name: reddit
+version: 0.1.0
+description: OTUS reddit application UI
+maintainers:
+  - name: Dmitry Lyutenko
+    email: q@mail.ru
+appVerison: 1.0

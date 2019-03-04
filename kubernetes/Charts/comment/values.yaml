@@ -5,7 +5,5 @@ service:
 image:  
   repository: egiptyanin
   tag: latest
-postHost:
-postPort:
-commentHost:
-commentPort:
+
+databaseHost:
