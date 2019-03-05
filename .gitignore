@@ -22,3 +22,4 @@ Vagrant*
 *.sh
 tls.crt
 tiller*
+Gitlab_ci
