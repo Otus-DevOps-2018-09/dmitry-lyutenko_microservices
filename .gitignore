@@ -20,3 +20,6 @@ Vagrant*
 .env
 *_all.sh
 *.sh
+tls.crt
+tiller*
+Gitlab_ci

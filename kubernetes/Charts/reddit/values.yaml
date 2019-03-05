@@ -1,0 +1,27 @@
+comment:
+  service:
+    internalPort: 9292
+    externalPort: 9292
+  image:
+    repository: egiptyanin/comment
+    tag: latest
+
+post:
+  service:
+    internalPort: 5000
+    externalPort: 5000
+  image:  
+    repository: egiptyanin/post
+    tag: latest
+
+ui:
+  service:
+    internalPort: 9292
+    externalPort: 9292
+  image:  
+    repository: egiptyanin/ui
+    tag: latest
+  postHost:
+  postPort:
+  commentHost:
+  commentPort:
