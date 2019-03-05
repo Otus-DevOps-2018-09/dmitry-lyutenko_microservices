@@ -1,3 +1,30 @@
+# Выполнено ДЗ №25
+
+ - [X] Основное ДЗ
+ 
+## В процессе сделано:
+
+ - ;
+ - ;
+ - ;
+ - ;
+ - ;
+ - ;
+ - ;
+ - ;
+ 
+
+## Build status:
+
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/dmitry-lyutenko_microservices.svg?branch=kubernetes-5)](https://travis-ci.com/Otus-DevOps-2018-09/dmitry-lyutenko_microservices)
+
+## PR checklist
+ - [X] Выставил label с номером домашнего задания
+ - [X] Выставил label с темой домашнего задания
+
+---
+---
+
 # Выполнено ДЗ №24
 
  - [X] Основное ДЗ
