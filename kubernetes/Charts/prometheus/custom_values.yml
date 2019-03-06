@@ -174,7 +174,7 @@ configmapReload:
 kubeStateMetrics:
   ## If false, kube-state-metrics will not be installed
   ##
-  enabled: false
+  enabled: true
 
   # Defines the serviceAccountName to use when `rbac.create=false`
   serviceAccountName: default
@@ -232,7 +232,7 @@ kubeStateMetrics:
 nodeExporter:
   ## If false, node-exporter will not be installed
   ##
-  enabled: false
+  enabled: true
 
   # Defines the serviceAccountName to use when `rbac.create=false`
   serviceAccountName: default
@@ -806,6 +806,48 @@ serverFiles:
           - source_labels: [__meta_kubernetes_pod_name]
             action: replace
             target_label: kubernetes_pod_name
+
+      - job_name: 'ui-endpoints'
+        kubernetes_sd_configs:
+           - role: endpoints
+        relabel_configs:
+         - source_labels: [__meta_kubernetes_service_label_component]
+           action: keep
+           regex: ui
+         - action: labelmap
+           regex: __meta_kubernetes_service_label_(.+)
+         - source_labels: [__meta_kubernetes_namespace]
+           target_label: kubernetes_namespace
+         - source_labels: [__meta_kubernetes_service_name]
+           target_label: kubernetes_name
+
+      - job_name: 'post-endpoints'
+        kubernetes_sd_configs:
+           - role: endpoints
+        relabel_configs:
+         - source_labels: [__meta_kubernetes_service_label_component]
+           action: keep
+           regex: post
+         - source_labels: [__meta_kubernetes_namespace]
+           target_label: kubernetes_namespace
+         - source_labels: [__meta_kubernetes_service_name]
+           target_label: kubernetes_name
+         - action: labelmap
+           regex: __meta_kubernetes_service_label_(.+)
+
+      - job_name: 'comment-endpoints'
+        kubernetes_sd_configs:
+           - role: endpoints
+        relabel_configs:
+         - source_labels: [__meta_kubernetes_service_label_component] 
+           action: keep
+           regex: comment
+         - source_labels: [__meta_kubernetes_namespace]
+           target_label: kubernetes_namespace
+         - source_labels: [__meta_kubernetes_service_name]
+           target_label: kubernetes_name
+         - action: labelmap
+           regex: __meta_kubernetes_service_label_(.+)
 
 networkPolicy:
   ## Enable creation of NetworkPolicy resources.
